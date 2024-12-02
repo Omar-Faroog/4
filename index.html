@@ -213,7 +213,7 @@
     left: 48%; /* لتوسيط الزر */
     transform: translateX(-50%); /* لتوسيع الزر بشكل أفقي */
     box-shadow: 0 4px 0 #58A700; /* إضافة ظل */
-    transition: all 0.2s ease; /* تأثير الانتقال */
+    transition: all 0.0s ease; /* تأثير الانتقال */
     outline: none; /* إزالة تأثير التحديد */
     -webkit-tap-highlight-color: transparent; /* إزالة تأثير التمييز في الهواتف المحمولة */
 }
@@ -261,7 +261,7 @@
     border-top: 5px solid #E5E5E5;
     border-left: 4px solid #ccc;
     border-right: 2px solid #ccc;
-    transition: all 0.3s ease;
+    transition: all 0.0s ease;
 }
 
 #popup.show {
@@ -286,7 +286,7 @@
     left: 48%;
     transform: translateX(-50%);
     box-shadow: 0 4px 0 #58A700;
-    transition: all 0.2s ease;
+    transition: all 0.0s ease;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -301,7 +301,7 @@
 #understandButton {
     width: 84%;
     max-width: 500px;
-    background-color: #000;
+    background-color: #FF4B4B;
     color: white;
     border: none;
     border-radius: 15px;
@@ -313,8 +313,8 @@
     bottom: 5px;
     left: 48%;
     transform: translateX(-50%);
-    box-shadow: 0 4px 0 #58A700;
-    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #EA2B2B;
+    transition: all 0.0s ease;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -344,7 +344,7 @@
     font-size: 18px;
     position: fixed; /* لتثبيت الزر في أسفل الشاشة */
     box-shadow: 0 4px 0 #1899D6;
-    transition: all 0.2s ease;
+    transition: all 0.0s ease;
     outline: none; /* إزالة تأثير التحديد */
     -webkit-tap-highlight-color: transparent; /* إزالة تأثير التمييز في الهواتف المحمولة */
     font-weight: bold;
@@ -514,7 +514,7 @@ function nextQuestion() {
         } else {
             showCompletionMessage();
         }
-    }, 250); // 200 مللي ثانية تأخير
+    }, 200); // 200 مللي ثانية تأخير
 }
 
 function loadQuestion() {
@@ -546,7 +546,7 @@ function selectAnswer(element, index) {
 }
 
 function checkAnswer() {
-    setTimeout(function() { // تأخير لمدة 200 مللي ثانية قبل فحص الإجابة
+    setTimeout(function() { // تأخير لمدة 100 مللي ثانية قبل فحص الإجابة
         const selectedOption = document.querySelector(".option-button.selected");
         const currentQuestion = questions[currentProgress];
         const popup = document.getElementById("popup");
@@ -602,7 +602,7 @@ function checkAnswer() {
 
             popup.style.display = "block";
         }
-    }, 200); // 200 مللي ثانية تأخير
+    }, 100); // 200 مللي ثانية تأخير
 }
 
 function updateProgressBar() {
